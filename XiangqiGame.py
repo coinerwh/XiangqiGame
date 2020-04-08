@@ -204,42 +204,29 @@ class XiangqiGame:
 
     def convert_notation(self, x):
         """Converts algebraic to graph notation"""
-        if x == "a":
-            return 1
-        elif x == "b":
-            return 2
-        elif x == "c":
-            return 3
-        elif x == "d":
-            return 4
-        elif x == "e":
-            return 5
-        elif x == "f":
-            return 6
-        elif x == "g":
-            return 7
-        elif x == "h":
-            return 8
-        elif x == "i":
-            return 9
-        elif x == 1:
-            return "a"
-        elif x == 2:
-            return "b"
-        elif x == 3:
-            return "c"
-        elif x == 4:
-            return "d"
-        elif x == 5:
-            return "e"
-        elif x == 6:
-            return "f"
-        elif x == 7:
-            return "g"
-        elif x == 8:
-            return "h"
-        else:
-            return "i"
+
+        pos = str(x)
+        notation_dict = {"a" : 1,
+                          "b" : 2,
+                          "c" : 3,
+                          "d" : 4,
+                          "e" : 5,
+                          "f" : 6,
+                          "g" : 7,
+                          "h" : 8,
+                          "i" : 9,
+                          "1": "a",
+                          "2": "b",
+                          "3": "c",
+                          "4": "d",
+                          "5": "e",
+                          "6": "f",
+                          "7": "g",
+                          "8": "h",
+                          "9": "i",
+                          }
+        return notation_dict[pos]
+
 
     def make_move(self, move_from, move_to):
         """Moves game piece if valid"""
